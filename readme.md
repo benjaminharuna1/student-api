@@ -45,6 +45,7 @@ npx nodemon server.js
 ## API Endpoints
 | Method | Endpoint         | Description              |
 |--------|----------------|--------------------------|
+| GET    | `/Welcome`      | Displays "Welcome to Day 5 Message"        |
 | GET    | `/students`     | Get all students        |
 | GET    | `/students/:id` | Get a student by ID     |
 | POST   | `/students`     | Create a new student    |

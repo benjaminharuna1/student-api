@@ -7,11 +7,11 @@ const cors = require('cors');
 // Initialize Express app
 const app = express();
 
-// My Middleware
+// Middleware
 app.use(cors()); // Enable CORS
 app.use(express.json()); // Parse JSON request bodies
 
-// Loading environment variables
+// Load environment variables
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -32,7 +32,11 @@ const studentSchema = new mongoose.Schema({
 
 const Student = mongoose.model('Student', studentSchema);
 
-// My Routes
+// Routes
+app.get('/welcome', (req, res) => {
+    res.send('Welcome to Day 5!');
+});
+
 app.post('/students', async (req, res) => {
     try {
         const { name, email, age } = req.body;
