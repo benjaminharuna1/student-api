@@ -16,7 +16,7 @@ Ensure you have the following installed:
 ## Installation
 1. **Clone the repository**:
    ```sh
-   git clone https://github.com/your-username/student-api.git
+   git clone https://github.com/benjaminharuna1/student-api.git
    cd student-api
    ```
 2. **Install dependencies**:
@@ -50,6 +50,10 @@ npx nodemon server.js
 | POST   | `/students`     | Create a new student    |
 | PUT    | `/students/:id` | Update a student        |
 | DELETE | `/students/:id` | Delete a student        |
+
+
+## Note:
+# To run your post requests use raw json requests from postman
 
 ## Troubleshooting
 If MongoDB connection fails:

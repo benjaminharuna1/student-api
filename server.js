@@ -7,11 +7,11 @@ const cors = require('cors');
 // Initialize Express app
 const app = express();
 
-// Middleware
+// My Middleware
 app.use(cors()); // Enable CORS
 app.use(express.json()); // Parse JSON request bodies
 
-// Load environment variables
+// Loading environment variables
 const PORT = process.env.PORT || 5000;
 const MONGO_URI = process.env.MONGO_URI;
 
@@ -32,7 +32,7 @@ const studentSchema = new mongoose.Schema({
 
 const Student = mongoose.model('Student', studentSchema);
 
-// Routes
+// My Routes
 app.post('/students', async (req, res) => {
     try {
         const { name, email, age } = req.body;
@@ -52,7 +52,7 @@ app.post('/students', async (req, res) => {
 
 app.get('/students', async (req, res) => {
     try {
-        const students = await Student.find({}, 'id name age email'); // Return only required fields
+        const students = await Student.find({}, 'id name age email'); 
         res.status(200).json(students);
     } catch (error) {
         res.status(500).json({ message: error.message });
